@@ -1,0 +1,6 @@
+Python-1sem
+C++-2sem
+Java-3sem
+C#-4sem
+Javascript-5sem
+Unreal Engine-6sem
