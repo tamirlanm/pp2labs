@@ -2,9 +2,11 @@ import pygame
 import datetime
 
 pygame.init()
-screen = pygame.display.set_mode((500, 400))
-running = True
-
+screen = pygame.display.set_mode((680, 480))
+done = False
+pygame.display.set_caption('MICKEYCLOCK')
+icon = pygame.image.load('images/mickeyclock.jpeg')
+pygame.display.set_icon(icon)
 clock = pygame.time.Clock()
 main_clock = pygame.image.load("images/mainclock.png")
 minute_hand = pygame.image.load(("images/rightarm.png"))
@@ -13,10 +15,10 @@ main_clock = pygame.transform.scale(main_clock, (500, 400))
 minute_hand = pygame.transform.scale(minute_hand, (500, 450))
 second_hand = pygame.transform.scale(second_hand, (50, 480))
 
-while running:
+while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            running = False
+            done = True
 
     screen.fill((255, 255, 255))
     current_time = datetime.datetime.now()
